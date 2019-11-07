@@ -1,6 +1,6 @@
 import { User } from "./User";
 import { Company } from "./Company";
-import {} from "googlemaps";
+/// <reference path="<relevant path>/node_modules/@types/googlemaps/index.d.ts" />
 
 const user = new User();
 const company = new Company();
