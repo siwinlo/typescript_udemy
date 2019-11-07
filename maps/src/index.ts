@@ -1,11 +1,10 @@
 import { User } from "./User";
 import { Company } from "./Company";
-/// <reference path="<relevant path>/node_modules/@types/googlemaps/index.d.ts" />
+import { CustomMap } from "./CustomMap";
 
+const customMap = new CustomMap("map");
 const user = new User();
 const company = new Company();
 
-console.log(user);
-console.log(company);
-
-google;
+customMap.addUserMarker(user);
+customMap.addCompanyMarker(company);
