@@ -1,9 +1,3 @@
-interface Sortable {
-  length: number;
-  compare(leftIndex: number, rightIndex: number): boolean;
-  swap(leftIndex: number, right: number): void;
-}
-
 export abstract class Sorter {
   abstract compare(leftIndex: number, rightIndex: number): boolean; // 'abstract' tells TS that these methods will exist in the child class
   abstract swap(leftIndex: number, rightIndex: number): void;
