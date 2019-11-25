@@ -1,11 +1,8 @@
-import { User } from "../models/user";
+import { User } from "./models/User";
 
-const user = new User({});
+const user = new User({ name: "bulbasaur", age: 0 });
+user.events.on("change", () => {
+  console.log("CHANGE");
+});
 
-user.on("change", () => {
-  console.log("change 1");
-});
-user.on("change", () => {
-  console.log("🐙");
-});
-user.trigger("sajglrjgl");
+user.events.trigger("change");
